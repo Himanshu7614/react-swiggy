@@ -111,7 +111,7 @@ export default function Home() {
           action="/"
           id="myForm"
           onSubmit={handleSubmit}
-          className={` flex-col  bg-white p-8 rounded shadow-md md:w-[90%] transition-all duration-500`}
+          className={` flex-col  bg-white p-8  shadow-md md:w-[90%] transition-all duration-500 rounded-[12px]`}
         >
           <div
             className={`${
@@ -243,7 +243,7 @@ export default function Home() {
           </div>
           {/* <h1 className="pt-3">{click}</h1> */}
           <img
-            className="flex justify-center mx-auto cursor-pointer"
+            className={`flex justify-center mx-auto cursor-pointer w- ${click != "" ? "flex [600px] h-[450px]": "hidden"} `}
             src={click}
           />
           <Link href="https://swiggy.advantageclub.co/" className="pt-4 flex justify-center capitalize text-orange-500 font-bold" >
