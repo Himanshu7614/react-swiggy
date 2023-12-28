@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -108,14 +107,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-red-300 to-orange-100 flex flex-col items-center justify-center h-auto py-20">
+      <div className="bg-gradient-to-r from-red-300 to-orange-100 flex flex-col items-center justify-center h-screen py-8">
         <h1 className="text-[2rem] py-2 font-semibold"> Future of Work</h1>
         <form
         action="/"
           id="myForm"
           onSubmit={handleSubmit}
-          className="bg-white p-8 rounded shadow-md md:w-[50%]"
+          className={` flex-col  bg-white p-8 rounded shadow-md md:w-[50%] transition-all duration-500`}
         >
+          <div className={`${gift != "" ? "hidden": "flex "} flex-col transition-all duration-500`}>
           <label className="block mb-4">
             <input
               type="checkbox"
@@ -232,6 +232,7 @@ export default function Home() {
             onSubmit={handleSubmit}
             className="bg-green-500 text-white p-2 w-full rounded cursor-pointer"
           />
+          </div>
          {/* <h1 className="pt-3">{click}</h1> */}
          <img  className="flex justify-center mx-auto cursor-pointer" src={click} />
 <h1 className="pt-4 flex justify-center capitalize text-orange-500 font-bold">{gift}</h1>
