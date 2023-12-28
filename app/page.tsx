@@ -111,7 +111,7 @@ export default function Home() {
           action="/"
           id="myForm"
           onSubmit={handleSubmit}
-          className={` flex-col  bg-white p-8 rounded shadow-md md:w-[50%] transition-all duration-500`}
+          className={` flex-col  bg-white p-8 rounded shadow-md md:w-[90%] transition-all duration-500`}
         >
           <div
             className={`${
