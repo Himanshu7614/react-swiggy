@@ -18,7 +18,6 @@ export default function Home() {
   const [gift, setGift] = useState("");
   const [text, setText] = useState("");
 
-
   const [click, setClick] = useState("");
   const [loading, setloading] = useState(true);
 
@@ -68,30 +67,9 @@ export default function Home() {
       const countYes = allOption.filter((option) => option != "").length;
       const countNo = allOption.filter((option) => option === "No").length;
 
-      if (countYes >= 7) {
-        Swal.fire({
-          title: "Hurray, thanks for your response! ",
-          text: `Your score is ${countYes} out of 9!! You are a Blended Champ! Keep Up the Good Work in 2024. Take Every Chance to Encourage Your Teammates to Participate in the Blended Behaviours.`,
-          icon: "success",
-          confirmButtonText: "Okay",
-        });
-      } else if (countYes > 4) {
-        Swal.fire({
-          title: "Hurray, thanks for your response! ",
-
-          text: ` Your score is ${countYes} out of 9!! You are a Blended Proficient! You are Doing Good with Scope for Improvement in 2024. So, Take Some Resolutions & Become a Blended Expert with the Right Behaviours. `,
-          icon: "success",
-          confirmButtonText: "Okay",
-        });
-      } else if (countYes <= 4) {
-        Swal.fire({
-          title: "Hurray, thanks for your response! ",
-          text: `Your score is ${countYes} out of 9!!  You are a Blended Newbie! Commit to the Blended Behaviours in 2024 & Take Your Work Experience to the Next Level with our Tenets. `,
-          icon: "success",
-          confirmButtonText: "Okay",
-        });
-      }
-      setText("Yay, thanks for commiting to Swiggy's Blended Ways of Working! /n Now, unlike your New Year's Resolutions, follow the selected behaviours & become a Blended Champ! ")
+      setText(
+        "Yay, thanks for commiting to Swiggy's Blended Ways of Working! Now, unlike your New Year's Resolutions, follow the selected behaviours & become a Blended Champ! "
+      );
       setGift("Click to Know More about Blended Ways of Working.");
       setClick("/image/gif.gif");
 
@@ -246,14 +224,20 @@ export default function Home() {
           </div>
           {/* <h1 className="pt-3">{click}</h1> */}
           <img
-            className={`flex justify-center mx-auto cursor-pointer w- ${click != "" ? "flex [600px] h-[450px]": "hidden"} `}
+            className={`flex justify-center mx-auto cursor-pointer w- ${
+              click != "" ? "flex [600px] h-[450px]" : "hidden"
+            } `}
             src={click}
           />
-          <Link href="https://swiggy.advantageclub.co/" className="pt-4 flex justify-center capitalize " >
-            {text}
-            <span className="text-orange-500 font-bold"> {gift}</span>
-           
-          </Link>
+          <div className="flex  flex-col items-center justify-center text-center">
+            <p>{text}</p>
+            <Link
+              href="https://swiggy.advantageclub.co/"
+              className="pt-4 flex justify-center capitalize "
+            >
+              <span className="text-orange-500 font-bold"> {gift}</span>
+            </Link>
+          </div>
         </form>
       </div>
     </>
