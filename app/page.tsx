@@ -16,6 +16,8 @@ export default function Home() {
   const [option9, setoprtion9] = useState("");
 
   const [gift, setGift] = useState("");
+  const [text, setText] = useState("");
+
 
   const [click, setClick] = useState("");
   const [loading, setloading] = useState(true);
@@ -89,7 +91,8 @@ export default function Home() {
           confirmButtonText: "Okay",
         });
       }
-      setGift("Thank you! Click here to avail your gift.");
+      setText("Yay, thanks for commiting to Swiggy's Blended Ways of Working! /n Now, unlike your New Year's Resolutions, follow the selected behaviours & become a Blended Champ! ")
+      setGift("Click to Know More about Blended Ways of Working.");
       setClick("/image/gif.gif");
 
       setloading(true);
@@ -246,8 +249,10 @@ export default function Home() {
             className={`flex justify-center mx-auto cursor-pointer w- ${click != "" ? "flex [600px] h-[450px]": "hidden"} `}
             src={click}
           />
-          <Link href="https://swiggy.advantageclub.co/" className="pt-4 flex justify-center capitalize text-orange-500 font-bold" >
-            {gift}
+          <Link href="https://swiggy.advantageclub.co/" className="pt-4 flex justify-center capitalize " >
+            {text}
+            <span className="text-orange-500 font-bold"> {gift}</span>
+           
           </Link>
         </form>
       </div>
