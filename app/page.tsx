@@ -83,24 +83,10 @@ export default function Home() {
 
   return (
     <>
-    <div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
-      <div className="flex flex-col items-center justify-center h-screen py-4">
-        <h1 className="text-[2rem] pb-2 font-semibold">
+      <div className="flex flex-col items-center justify-center h-screen py-4 bg-transparent">
+        <h1 className="text-[2rem] pb-2 font-semibold text-white">
           {" "}
-          Blended ways of working
+          Select the behaviours you wish to commit to this year
         </h1>
         <form
           action="/"
