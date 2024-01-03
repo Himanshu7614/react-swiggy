@@ -253,6 +253,7 @@ export default function Home() {
             <p className="text-[18px] font-bold">{text}</p>
             <p>{text1}</p>
             <Link
+            target="_blank"
               href="https://sites.google.com/swiggyverse.com/intranet/our-blended-ways-of-working"
               className="pt-4 flex justify-center capitalize "
             >
