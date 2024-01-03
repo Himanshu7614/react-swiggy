@@ -83,7 +83,21 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-red-300 to-orange-100 flex flex-col items-center justify-center h-screen py-4">
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+      <div className="flex flex-col items-center justify-center h-screen py-4">
         <h1 className="text-[2rem] pb-2 font-semibold">
           {" "}
           Blended ways of working
@@ -92,7 +106,7 @@ export default function Home() {
           action="/"
           id="myForm"
           onSubmit={handleSubmit}
-          className={` flex-col  bg-white p-8  shadow-md md:w-[90%] transition-all duration-500 rounded-[12px]`}
+          className={` flex-col  bg-white p-8  shadow-md md:w-[90%] transition-all duration-500 rounded-[12px] m-5`}
         >
           <div
             className={`${
