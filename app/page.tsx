@@ -252,21 +252,7 @@ export default function Home() {
           <div className="flex  flex-col items-center justify-center text-center mt-5">
             <p className="text-[18px] font-bold">{text}</p>
             <p>{text1}</p>
-            <Link
-            target="_blank"
-              href="https://sites.google.com/swiggyverse.com/intranet/our-blended-ways-of-working"
-              className="pt-4 flex justify-center capitalize "
-            >
-              <span
-                className={
-                  (gift === "" ? "hidden" : "block") + 
-                      ` font-bold bg-[#ED8a22] px-4 py-2 rounded-full text-white`
-                }
-              >
-                {" "}
-                {gift}
-              </span>
-            </Link>
+           
           </div>
         </form>
       </div>
